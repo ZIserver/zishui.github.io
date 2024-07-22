@@ -1,0 +1,134 @@
+html,
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e272e;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+ul {
+  position: relative;
+  display: flex;
+}
+
+ul li {
+  /* 如果设置为inline-block，会有空隙 */
+  /* https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements */
+  list-style: none;
+  width: 120px;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.slider {
+  width: 100px;
+  height: 40px;
+  background-color: #5352ed;
+  border-radius: 4px;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  z-index: -1;
+  transition: all ease 0.4s;
+  animation: 2s ease-in-out waves infinite;
+}
+
+li:nth-child(1):hover ~ .slider {
+  left: 10px;
+}
+
+li:nth-child(2):hover ~ .slider {
+  left: 128px;
+}
+
+li:nth-child(3):hover ~ .slider {
+  left: 248px;
+}
+
+li:nth-child(4):hover ~ .slider {
+  left: 368px;
+}
+
+li:nth-child(5):hover ~ .slider {
+  left: 488px;
+}
+
+@keyframes waves {
+  from {
+    clip-path: polygon(
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+    );
+  }
+  to {
+    clip-path: polygon(
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+    );
+  }
+}
